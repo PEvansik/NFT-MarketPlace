@@ -223,8 +223,6 @@ main .container {
 }
 
 .main-body {
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
 }
 
@@ -354,7 +352,7 @@ main .container {
 }
 
 /* ****************************************
-************** ADVERT SECTION ***************
+************** TRENDING SECTION ***************
 *******************************************/
 
 .section-heading {
@@ -364,6 +362,7 @@ main .container {
 .trending-paragraph {
     line-height: 1.5;
     margin-block: 1rem;
+    text-align: center;
 }
 
 .collage-holder {
@@ -646,6 +645,9 @@ main .container {
     text-transform: uppercase;
     padding-block: 1.5rem;
 }
+#wallet .container > p {
+    text-align: center;
+}
 .all-wallets {
     display: flex;
     justify-content: space-evenly;
@@ -659,7 +661,7 @@ main .container {
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    width: 45%;
+    width: 200px;
     background-color: white;
     border-radius: 5px;
     /* gap: 2rem; */
@@ -796,11 +798,13 @@ textarea:focus {
     #guide .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        /* row-gap: 1rem; */
+        /* column-gap: 1rem; */
         border: 1px solid red;
     }
     .guide-sec {
-        width: 40%;
+        width: 30%;
         border: 1px solid red;
     }
 
@@ -810,11 +814,11 @@ textarea:focus {
     #trending .collage {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         border: 1px solid red;
     }
     .collage-holder {
-        width: 40%;
+        width: 30%;
         border: 1px solid red;
     }
 
@@ -825,32 +829,69 @@ textarea:focus {
         border: 1px solid red;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .card {
-        width: 40%;
+        width: 30%;
+        border: 1px solid red;
+    }
+
+/* ****************************************
+*********** CREATORS SECTION ************
+*******************************************/
+    #creators .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .creator-holder {
+        width: 300px;
         border: 1px solid red;
     }
 }
 
 
 
+@media only screen and (width > 800px ) {
+    .main-body {
+        display: flex;
+    }
+}
+
+
 @media only screen and (width > 1440px ) {
     
-    /* ****************************************
-    ************** GUIDE SECTION ***************
-    *******************************************/
-        .guide-sec {
-            width: 20%;
-            border: 1px solid red;
-        }
+/* ****************************************
+************** GUIDE SECTION ***************
+*******************************************/
+    .guide-sec {
+        width: 20%;
+        border: 1px solid red;
+    }
 
 
 /* ****************************************
 ************ TRENDING SECTION *************
 *******************************************/
-        .collage-holder {
-            width: 40%;
-            border: 1px solid red;
-        }
+    .collage-holder {
+        width: 20%;
+        border: 1px solid red;
     }
+
+/* ****************************************
+*********** INFLUENCER SECTION ************
+*******************************************/
+    .card {
+        width: 20%;
+        border: 1px solid red;
+    }
+}
+
+
+
+@media only screen and (width >= 2000px ) {
+    .project {
+        width: 2000px;
+        /* border: 1px solid red; */
+    }
+}
