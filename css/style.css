@@ -23,6 +23,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     background-color: #25c251;
+    border-radius: 5px;
 }
 li {
     list-style: none;
@@ -117,7 +118,7 @@ header .container {
 .wallet {
     padding-inline: 1rem
 }
-.wallets {
+/* .wallets {
     display: none;
     width: 100%;
     position: absolute;
@@ -141,7 +142,7 @@ header .container {
 }
 .dropdown:hover .wallets {
     display: block;
-}
+} */
 
 .nav-close,
 .nav-open,
@@ -640,6 +641,13 @@ main .container {
 #wallet {
     padding-block: 2rem;
 }
+#wallet .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
 #wallet h3 {
     text-align: center;
     text-transform: uppercase;
@@ -653,7 +661,8 @@ main .container {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-block: 2rem;
+    max-width: 700px;
+    margin-block: auto;
 }
 .wallet-holder {
     display: flex;
@@ -661,11 +670,9 @@ main .container {
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    width: 200px;
+    max-width: 150px;
     background-color: white;
     border-radius: 5px;
-    /* gap: 2rem; */
-
 }
 .wallet-logo {
     display: flex;
@@ -731,6 +738,8 @@ footer {
 }
 #contact-form {
     padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 #visitors-name, textarea {
     padding: .5rem;
@@ -775,10 +784,8 @@ textarea:focus {
 
 
 
-
-
 /* *************************************************
-**************** MEDIA QUERY ***********************
+**************** MEDIA QUERIES ***********************
 *************************************************** */
 
 @media only screen and (width > 600px ) {
@@ -798,14 +805,12 @@ textarea:focus {
     #guide .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
         /* row-gap: 1rem; */
         /* column-gap: 1rem; */
-        border: 1px solid red;
     }
     .guide-sec {
         width: 30%;
-        border: 1px solid red;
     }
 
 /* ****************************************
@@ -814,26 +819,22 @@ textarea:focus {
     #trending .collage {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        border: 1px solid red;
+        justify-content: space-evenly;
     }
     .collage-holder {
         width: 30%;
-        border: 1px solid red;
     }
 
 /* ****************************************
 *********** INFLUENCER SECTION ************
 *******************************************/
     #card .container {
-        border: 1px solid red;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .card {
-        width: 30%;
-        border: 1px solid red;
+        width: 35%;
     }
 
 /* ****************************************
@@ -846,17 +847,73 @@ textarea:focus {
     }
     .creator-holder {
         width: 300px;
-        border: 1px solid red;
+    }
+
+/* ****************************************
+************* FOOTER SECTION **************
+*******************************************/
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    #contact-form,
+    .up-foot {
+        width: 45%;
+        /* border: 1px solid red; */
     }
 }
-
 
 
 @media only screen and (width > 800px ) {
+    .project {
+        padding-inline: 3rem;
+    }
+/* ****************************************
+*********** HEADER SECTION ************
+*******************************************/
+
+
+/* ****************************************
+*********** MAIN SECTION ************
+*******************************************/
     .main-body {
         display: flex;
+        justify-content: space-between;
+    }
+    .main-text-part{
+        width: 40%;
+    }
+    .hero-image {
+        width: 50%;
     }
 }
+
+
+@media only screen and (width > 900px ) {
+
+/* ****************************************
+************* FOOTER SECTION **************
+*******************************************/
+    .up-foot {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .foot-logo{
+        width: 35%;
+        justify-content: center;
+    }
+    .menu-social  {
+        width: 60%;
+    }
+    .up-foot {
+        width: 55%;
+    }
+    #contact-form {
+        width: 35%;
+    }
+}
+
 
 
 @media only screen and (width > 1440px ) {
@@ -892,6 +949,5 @@ textarea:focus {
 @media only screen and (width >= 2000px ) {
     .project {
         width: 2000px;
-        /* border: 1px solid red; */
     }
 }
